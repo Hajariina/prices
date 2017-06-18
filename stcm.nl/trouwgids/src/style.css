@@ -1,0 +1,853 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+              _   _  ___  ____          ___  _____ 
+             | | | ||_ _||  _ \        |_ _||_   _|
+             | |_| | | | | |_) | _____  | |   | |
+             |  _  | | | |  __/ |_____| | |   | |
+             |_| |_||___||_|           |___|  |_|
+ 
+   
+        (c) Concept, vormgeving, ontwerp en uitvoering
+         ~~ HIP-IT BV (Media Laboratory) Amsterdam ~~
+           Tel. +31-(0)20-617 02 82, info@hip-it.nl
+                        www.hip-it.nl
+
+(c) 1999-2010 HIP-IT Media Produkties BV
+(c) Redouan Salmoun
+
+All rights reserved! Alle rechten voorbehouden. Niets uit deze uitgave
+mag zonder voorafgaande schriftelijke toestemming van HIP-IT
+verveelvoudigd en/of openbaar worden gemaakt!
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@import url('../../src/global.css');
+.sprite, .lefty_top, .lefty_footer, .righty_top, .righty_footer, .aanmelden_prijskaartje_prijs, .aanmelden_biz_nieuw, .aanmelden_biz_select, .aanmelden_bestel_bit_2 div, .userspace_loggedout, .userspace_loggedin, .overzicht_wijzig, .overzicht_verlengi, .overzicht_reseti, .userinfo, .postfooter, .postfooter_up, .postfooter_delete, #loginform, .addthis_button_facebook, .addthis_button_twitter, .addthis_button_google, .webbut1, .webbut2, .webbut3{
+  background-image:url('../img/sprite.png');
+  background-repeat:no-repeat
+}
+.spriteh, #footer, #content, #bcontent, .overzicht_bits, .overzicht_bit_verloopt, .overzicht_bit_verlopen, .overzicht_bit_actief{
+  background:url('../img/spriteh.png') repeat-x
+}
+.spritev, #notification .c, .message, .postfooter_buttons{
+  background:url('../img/spritev.png') repeat-y
+}
+html{
+  overflow-y:scroll
+}
+body{
+  margin:0px;
+  padding:0px;
+  background-color:#3c3d41;
+  color:#FFF
+}
+A:link, A:visited, A:active{
+	color:#3c3d41;
+	text-decoration:none
+}
+A:hover{
+	color:#CF0200;
+	text-decoration:underline
+}
+.gold A:link, .gold A:visited, .gold A:active, .gold{
+	color:#96886A;
+	text-decoration:none
+}
+.gold A:hover{
+	color:#A89A7E;
+	text-decoration:underline
+}
+.db{
+  color:#655b4b
+}
+.g{
+  color:#8C8C8C
+}
+h1{
+  font-family: Arial;
+  font-size:20px
+}
+/* input */
+input{
+  font-family:Arial, Tahoma;
+  font-size:12px;
+  padding:2px;
+  border:1px inset #E5E5E5;
+  width:220px;
+  color:#999
+}
+textarea{
+  font-family:Arial, Tahoma;
+  font-size:12px;
+  padding:2px;
+  border:1px inset #E5E5E5;
+  width:90%;
+  color:#999
+}
+select{
+  font-family:Arial, Tahoma;
+  font-size:12px;
+  padding:2px;
+  border:1px inset #E5E5E5;
+  width:200px;
+  color:#999
+}
+#mvcnetworknav{
+  height:26px;
+  overflow:hidden
+}
+/* borders */
+.aborder{
+	border:1px solid #c8b896
+}
+.bborder{
+	border-bottom:1px solid #c8b896
+}
+.rborder{
+	border-right:1px solid #c8b896
+}
+.lborder{
+	border-left:1px solid #c8b896
+}
+.tborder{
+	border-top:1px solid #c8b896
+}
+.dbborder{
+	border-bottom:1px dotted #FFF
+}
+/* skins en alternates */
+.skin_dark{
+  background-color:#f50777
+}
+.skin_medium{
+  background-color:#e9e3d5
+}
+.skin_light{
+  background-color:#B7DBEB
+}
+.alt1{
+  background-color:#f5f1e9
+}
+.alt2{
+  background-color:#e9e3d5
+}
+/* margins, paddings en linespacings */
+.bmargin{
+  margin-bottom:10px
+}
+.rmargin{
+  margin-right:5px
+}
+.ls5{
+  line-height: 0.5cm
+}
+.chckbx_text{
+  position:relative;
+  top:-3px
+}
+/* subglobal mvc dialogs */
+#dialogback, #dialog{
+  background:#E6E6E8 url('../../img/pops_05.gif') repeat-x
+}
+#dialogpadding, #dialog{
+  padding-top:50px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:10px
+}
+#dialoginborder, #dialog{
+  border:solid 1px #FFFFFF;
+}
+.dialogoutborder{
+  padding:5px;
+  background:#A7A6A6
+}
+#overlay{
+  background-color:#000
+}
+/* buttons */
+.button{
+  text-align:center;
+  background:url('../img/sprite.png') -126px -86px;
+  height:25px;
+  width:126px;
+  color:#FFF;
+  padding: 0px;
+  font-family:Arial;
+  font-size:12px;
+  font-weight:bold
+}
+#divformbuttons{
+  margin:0px;
+}
+#divformbuttonsc{
+  /* */
+}
+#postform{
+  margin:100px 0px 0px 183px
+}
+.formbutton{
+  width:22px;
+  height:22px;
+  background:url('../img/sprite.png') -904px 0px no-repeat
+}
+.formbuttonover{
+  background-position:-904px -22px
+}
+.formbuttondown{
+  background-position:-904px -44px
+}
+.formbuttonup{
+  background-position:-49px -66px
+}
+.formtextarea{
+  width:550px;
+  border:1px solid #CDCDCD;
+  margin:10px 0px 5px 0px;
+  padding:5px
+}
+/* start mainpagina */
+#main{
+  width:100%
+}
+#header{
+  width:100%;
+  height:286px
+}
+/* footer */
+#footer{
+  background-position:0px -144px;
+  width:100%
+}
+#footeri{
+  margin:0px auto;
+  width:990px;
+  height:62px;
+  background:url('../img/sprite.png') 0px -557px no-repeat;
+  padding-top:55px
+}
+#footer .footerl{
+  width:718px;
+  padding:15px 0px 0px 0px
+}
+#footer .footerl .copy{
+  position:relative;
+  top:10px
+}
+#footer .footerr{
+  width:272px
+}
+
+/* start content displays */
+#content{
+  width:100%;
+  background-color:#FFF;
+  background-position:0px -591px
+}
+#contenti{
+  width:990px;
+  margin:0px auto;
+  overflow:hidden
+}
+/* frontdisplay en rubriekdisplay  */
+#frontdisplay, #rubriekdisplay{
+  margin:20px 0px 0px 0px
+}
+#frontdisplay .bedrijfc, #rubriekdisplay .bedrijfc{
+  width:186px;
+  height:254px;
+  background:url('../img/sprite.png') -10px -130px no-repeat;
+  padding:4px;
+  margin-bottom:10px
+}
+/* frontdisplay */
+#frontdisplay .bedrijfc div{
+  font-family: georgia, serif;
+  font-size:18px;
+  cursor:pointer;
+  cursor:hand;
+  padding:145px 10px 0px 10px;
+}
+#frontdisplay .bedrijfc p{
+  margin:10px 0px 5px 0px;
+  color:#454545
+}
+#frontdisplay .bedrijfc .cats{
+  background:url('../img/rubriekc.jpg') no-repeat;
+}
+#frontdisplay .bedrijfc .cats div{
+  
+}
+#frontdisplay .bedrijfc .cat0{
+  background-position:-4px -4px
+}
+#frontdisplay .bedrijfc .cat1{
+  background-position:-203px -4px
+}
+#frontdisplay .bedrijfc .cat2{
+  background-position:-402px -4px
+}
+#frontdisplay .bedrijfc .cat3{
+  background-position:-601px -4px
+}
+#frontdisplay .bedrijfc .cat4{
+  background-position:-800px -4px
+}
+#frontdisplay .bedrijfc .cat5{
+  background-position:-4px -272px
+}
+#frontdisplay .bedrijfc .cat6{
+  background-position:-203px -272px
+}
+#frontdisplay .bedrijfc .cat7{
+  background-position:-402px -272px
+}
+#frontdisplay .bedrijfc .cat8{
+  background-position:-402px -272px
+}
+/* rubriekdisplay */
+#rubriekdisplay .bedrijfc .visite{
+  font-family: georgia, serif;
+  font-size:18px;
+  padding:6px;
+  height:246px
+}
+#rubriekdisplay .bedrijfc .visiteb{
+  position:relative;
+  top:-35px;
+  left:55px
+}
+#rubriekdisplay .bedrijfc .visiteimg{
+  background-repeat:no-repeat;
+  width:174px;
+  height:100px;
+  margin-bottom:5px
+}
+#rubriekdisplay .bedrijfc .intro{
+  height:60px;
+  margin:5px 0px 10px 0px
+}
+.glf{
+  padding:20px 0px 5px 0px;
+  font-family: georgia, serif;
+  font-size:24px
+}
+.gmf{
+  font-family: georgia, serif;
+  font-size:18px
+}
+
+/* notificatie/tips */
+#notification{
+  width:100%;
+  margin:10px 0px 20px 0px
+}
+#notification ul{
+  margin-bottom:0px
+}
+#notification .h{
+  height:9px;
+  background:url('../img/sprite.png') 0px -527px no-repeat
+}
+#notification .c{
+  background-position:-775px 0px
+}
+#notification .icon{
+  width:50px;
+  height:16px;
+  background:url('../img/sprite.png') -213px -128px no-repeat
+}
+#notification .intro{
+  width:930px
+}
+#notification #slidein{
+  padding:20px 10px 10px 20px;
+  display:none
+}
+#notification .f{
+  height:20px;
+  background:url('../img/sprite.png') 0px -536px no-repeat
+}
+
+/* bedrijven */
+/* biz premium profiel */
+#bcontent{
+  width:100%;
+  background-color:#FFF;
+  background-position:0px -261px
+}
+.bc{
+  width:990px;
+  height:242px;
+  overflow:hidden
+}
+/* info */
+.bc .info{
+  width:500px;
+  padding:50px 10px 10px 0px;
+  overflow:hidden;
+}
+.bc .info .logo{
+  width:100px;
+  height:110px;
+  padding:5px 0px 0px 5px;
+  margin-right:15px;
+  background:url('../img/sprite.png') -855px -235px no-repeat
+}
+.bc .info .logo .logoi{
+  width:95px;
+  height:95px
+}
+.bc .info .logo .nologo{
+  background-position: -860px -240px
+}
+.bc .info .profiel{
+  width:380px
+}
+.bc .info .profiel .title{
+  font-family: georgia, serif;
+  font-size:28px;
+  position:relative;
+  top:-5px;
+  padding-bottom:5px
+}
+.bc .info .profiel .data{
+  width:90%;
+  height:115px;
+  overflow:hidden
+}
+.bc .info .omschrijving{
+  margin:20px 0px 5px 0px
+}
+/* contact */
+.bc .contact{
+  width:310px;
+  padding-top:45px
+}
+.bc .contact .naw{
+  margin-bottom:15px
+}
+.bc .contact .cinfo .tag{
+  width:50px;
+  margin-bottom:5px;
+  text-transform:uppercase
+}
+.bc .contact .cinfo .tdata{
+  position:relative;
+  top:-2px
+}
+.bc .contact .cinfo .cbuttons{
+  margin-top:15px
+}
+.webbut1, .webbut2, .webbut3{
+  width:32px;
+  height:32px;
+  margin-right:4px
+}
+.webbut1{
+  background-position:-761px -13px
+}
+.webbut2{
+  background-position:-761px -52px
+}
+.webbut3{
+  background-position:-761px -91px
+}
+.addthis_button_facebook, ..addthis_button_twitter, .addthis_button_google{
+  width:32px;
+  height:32px
+}
+.addthis_button_facebook{
+  background-position:-713px -13px
+}
+.addthis_button_twitter{
+  background-position:-713px -53px
+}
+.addthis_button_google{
+  background-position:-713px -92px
+}
+/* gmap */
+.bc .gmap{
+  width:130px;
+  padding-left:40px;
+  height:130px
+}
+.bc .gmapi{
+  width:130px;
+  height:130px;
+  margin-top:30px;
+  background:url('../img/sprite.png') -540px -10px no-repeat
+}
+/* gallery */
+#picviewer{
+  width:990px;
+  margin:0px auto;
+  overflow:hidden;
+  height:640px;
+  white-space: nowrap
+}
+
+/* comments */
+#postcontainer{
+  width:990px;
+  margin:0px auto;
+  overflow:hidden
+}
+#postcontainer .bar{
+  height:73px;
+  padding-top:15px;
+  margin-bottom:10px
+}
+#postcontainer .bar .pagenavl{
+  width:600px;
+  font-family: georgia, serif;
+  font-size:24px
+}
+#postcontainer .bar .pagenavr, .pagenavr{
+  width:390px;
+  padding:10px 0px 10px 0px;
+  font-family: Arial, serif;
+  font-size:11px
+}
+#pagenavbc{
+  width:390px;
+  margin:0px 0px 10px 420px
+  
+}
+#postcontainer .lefty_top, #postcontainer .lefty_content, #postcontainer .lefty_footer{
+  margin-left:173px
+}
+
+/* message */
+.userinfo{
+  background-position:-10px -856px;
+  height:75px
+}
+.userinfo .avatar{
+  margin:6px 16px 0px 6px;
+  width:50px;
+  height:50px
+}
+.userinfo .avatari{
+  background-position:50% 50%;
+  width:50px;
+  height:50px
+}
+.userinfo .noavatar{
+  background-position:-912px -353px;
+  width:50px;
+  height:50px
+}
+.userinfo .username{
+  width:200px;
+  padding:10px
+}
+.quoteblok{
+  border:1px dotted #8C8C8C;
+  background:#fff;
+  padding:10px;
+  margin:2px 0px 20px 5px
+}
+.quoteblokby{
+  font-style:italic;
+  font-size:11px;
+}
+.message{
+  background-position:-1775px 0px;
+  width:564px;
+  padding:20px 30px 0px 30px;
+}
+.postfooter_buttons{
+  background-position:-1775px 0px;
+}
+.postfooter_up, .postfooter_delete{
+  width:19px;
+  height:19px;
+  margin-right:10px
+}
+.postfooter_up{
+  background-position:-962px -124px
+}
+.postfooter_delete{
+  background-position:-962px -154px
+}
+.postfooter{
+  background-position:-10px -957px;
+  width:624px;
+  height:35px
+}
+/* tab bladen */
+#tabblad{
+  display:none;
+  width:250px;
+  height:30px;
+  position:absolute;
+  top: 518px;
+  background:url('../img/sprite.png') -126px -10px no-repeat
+}
+#tabblad div{
+  width:107px;
+  height:22px;
+  text-align:right;
+  padding: 8px 18px 0px 0px
+}
+
+/* login */
+#loginform {
+	background-position:-10px -445px;
+	color: #000000;
+	width:359px;
+	height:45px;
+	padding:15px 0px 0px 265px;
+	margin:100px 0px 0px 183px
+}
+/* sharing iframes */
+.sharing{
+  width:180px;
+  height:22px;
+  overflow:hidden;
+  border:medium none;
+  margin:5px 0px 0px 0px
+}
+
+/* pagenums */
+.pagenumstatic {
+	color:#FFF;
+	background:url('../img/sprite.png') -495px -330px no-repeat;
+	margin:0px;
+	width:20px;
+	padding:2px 8px 2px 8px;
+	text-decoration:none;
+	text-align:center;
+	overflow:hidden
+}
+.pagenum A:link, .pagenum A:visited, .pagenum A:active, .pagenumajax {
+	color:#FFF;
+	background:url('../img/sprite.png') -495px -350px no-repeat;
+	margin:0px;
+	width:20px;
+	padding:2px 8px 2px 8px;
+	text-decoration:none;
+	text-align:center
+}
+.pagenum A:hover, .pagenumajax:hover {
+	color:#FFF;
+	background:url('../img/sprite.png') -495px -370px no-repeat;
+	margin:0px;
+	width:20px;
+	padding:2px 8px 2px 8px;
+	text-decoration:none;
+	text-align:center
+}
+
+/* subpaginas */
+.lefty{
+  width:644px;
+  margin:0px 10px 50px 0px
+}
+.righty{
+  width:336px;
+  margin-bottom:50px
+}
+.lefty_content, .righty_content{
+  padding:0px 10px 0px 10px
+}
+.lefty_top, .lefty_footer{
+  width:644px;
+  height:10px
+}
+.righty_top, .righty_footer{
+  width:336px;
+  height:10px
+}
+.lefty_top{ 
+  background-position:-213px -150px
+}
+.lefty_footer{
+  background-position:-213px -170px
+}
+.lefty_content{
+  width:624px;
+}
+.righty_top{
+  background-position:-213px -193px
+}
+.righty_footer{
+  background-position:-213px -213px
+}
+.aanmelden_biz_nieuw{
+  background-position:-213px -235px;
+  width:624px;
+  height:32px;
+  margin-top:20px
+}
+.aanmelden_biz_select{
+  background-position:-213px -280px;
+  width:624px;
+  height:32px;
+  margin-top:20px
+}
+.aanmelden_biz_drop{
+  width:212px;
+  padding:4px 0px 0px 188px
+}
+.aanmelden_biz_button{
+  width:224px;
+  height:32px
+}
+.aanmelden_bestel_bit_1{
+  padding:4px;
+  width:186px
+}
+.aanmelden_bestel_bit_2{
+  padding:1px;
+  width:288px
+}
+.aanmelden_bestel_bit_2 div{
+  height:20px;
+  padding:6px 20px 0px 0px
+}
+.aanmelden_bestel_bit_2a{
+  background-position:-664px -708px
+}
+.aanmelden_bestel_bit_2b{
+  background-position:-664px -742px
+}
+.aanmelden_bestel_bit_2c{
+  background-position:-664px -775px
+}
+.aanmelden_bestel_bit_3{
+  padding:3px;
+  width:34px
+}
+.aanmelden_bestel_bit_3 select{
+  width:60px;
+  font-size:11px
+}
+.aanmelden_bestel_bit_4{
+  width:86px;
+  padding:4px 5px 4px 5px
+}
+.aanmelden_prijskaartje{
+  float:left;
+  width:306px;
+  height:130px;
+  border-right:1px dotted #6C6C6C;
+  border-bottom:1px dotted #6C6C6C;
+  margin:0 5px 10px 0
+}
+.aanmelden_prijskaartje_data{
+  width:160px
+}
+.aanmelden_prijskaartje_titel{
+  font-size:180%;
+  font-weight:bold;
+  margin-bottom:10px
+}
+.aanmelden_prijskaartje_prijs{
+  background-position:-215px -330px;
+  width:90px;
+  height:60px;
+  font-weight:bold;
+  margin:20px 0 0 40px;
+  padding-top:30px;
+  text-align:center;
+  color:#FFF
+}
+/* userspace */
+.userspace_loggedout{
+  padding:65px 10px 10px 165px;
+  width:141px;
+  height:68px;
+  background-position:-10px -700px
+}
+.userspace_loggedout_login, .userspace_loggedout_register{
+  width:140px;
+  height:30px
+}
+.userspace_loggedout_register{
+  margin-top:5px
+}
+.userspace_loggedin{
+  background-position:-338px -700px;
+  padding:54px 10px 10px 170px;
+  width:136px;
+  height:79px 
+}
+.userspace_loggedin_links{
+  margin-top:1px
+}
+/* cp overzicht */
+.overzicht_bit_verlopen{
+  background-position:0px -37px
+}
+.overzicht_bit_verloopt{
+  background-position:0px -71px
+}
+.overzicht_bit_actief{
+  background-position:0px -105px
+}
+.overzicht_naam{
+  padding:8px;
+  width:204px
+}
+.overzicht_rubriek{
+  padding:8px;
+  width:204px
+}
+.overzicht_datum{
+  padding:8px;
+  width:73px
+}
+.overzicht_verleng, .overzicht_verlengi, .overzicht_wijzig, .overzicht_reset, .overzicht_reseti{
+  width:30px;
+  height:30px
+}
+.overzicht_verlengi{
+  background-position:-10px -61px
+}
+.overzicht_wijzig{
+  background-position:-10px -95px
+}
+.overzicht_reseti{
+  background-position:-62px -15px
+}
+/* bestellen */
+#bestellen .div .box{
+  width: 30px
+}
+#bestellen .div .cond{
+  width: 554px
+}
+#bestellen .logo{
+  width: 105px
+}
+#bestellen .naw{
+  width: 529px
+}
+#bestellen .desc{
+  width: 470px
+}
+#bestellen .prijs{
+  width: 134px
+}
+#bestellen .item{
+  margin-bottom:10px
+}
+#bestellen .total{
+  border-top:1px dotted #000000;
+  padding-top:10px
+}
+
+/* misc */
+.opac2{
+  filter:alpha(opacity='70');
+  -moz-opacity:0.7;
+  opacity:.7;
+  khtml-opacity:.7
+}
+.checkbox_disabled{
+  filter:alpha(opacity='0');
+  -moz-opacity:0;
+  opacity:0;
+  khtml-opacity:0
+}
